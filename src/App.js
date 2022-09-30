@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+// import React, { useState, Fragment } from "react";
+// Be is lehet importálni és akkor nem kell a tagbe írni "React.Fragment"-et hanem elég a "Fragment"
+
+// Ha üres tageket használok <> </> ez is a Fragmentet jelöli
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
 
@@ -12,10 +16,10 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </React.Fragment>
   );
 }
 
